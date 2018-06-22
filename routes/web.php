@@ -15,13 +15,14 @@ Route::get('/', function () {
     return view('accueil');
 });
 
+
+
 Route::get('/annonces', function () {
     return view('annonces');
 });
-/*
-Route::get('/search/{search}', 'searchController@show')->name('search');*/
 
 Route::get('/annonce/{id}', 'annonceController@show')->name('annonce');
+Route::get('/annonces', 'annoncesController@show')->name('annonces');
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
