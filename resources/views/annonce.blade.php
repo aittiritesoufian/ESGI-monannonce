@@ -31,9 +31,9 @@
 					</div>
 					@if ($annonce->user == $currentUserId)
 					<div class="btn-group">
-						<button type="button" class="btn btn-default">
+						<a href="/admin/annonces/{{ $annonce->id }}/edit" class="btn btn-default">
 							Modifier mon annonce
-						</button>
+						</a>
 					</div>
 					@endif
 				</div>

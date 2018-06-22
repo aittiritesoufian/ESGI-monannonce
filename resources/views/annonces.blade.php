@@ -5,7 +5,7 @@
 @endsection
 
 @section('content')
-<div class="container">
+<div class="container" id="annonce-wrapper">
     <div id="products" class="row list-group">
         @foreach($annonces as $annonce)
         <div class="item  col-xs-4 col-lg-4">

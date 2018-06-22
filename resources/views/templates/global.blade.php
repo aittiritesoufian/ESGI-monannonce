@@ -48,6 +48,9 @@
 					<li><a href="http://monannonce.project/annonces">Consulter les annonces</a></li>
           @if (Auth::check())
             <li><a href="http://monannonce.project/admin/annonces">Mes annonces</a></li>
+          @else
+            <li><a href="/admin/login">Connexion</a></li>
+            <li><a href="{{ route('register') }}">Créer un compte</a></li>
           @endif
 				</ul>
 				
