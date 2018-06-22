@@ -11,18 +11,17 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/accueil', function () {
+    return view('accueil');
 });
 
 Route::get('/annonces', function () {
     return view('annonces');
 });
+/*
+Route::get('/search/{search}', 'searchController@show')->name('search');*/
 
-Route::get('/annonce', function () {
-    return view('annonce');
-});
-
+Route::get('/annonce/{id}', 'annonceController@show')->name('annonce');
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
