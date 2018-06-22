@@ -12,19 +12,14 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
-});
-
-Route::get('/annonces', function () {
-    return view('annonces');
-});
-
-Route::get('/annonce', function () {
-    return view('annonce');
+    return view('accueil');
 });
 
 Route::get('/register', 'RegistrationController@create');
 Route::post('register', 'RegistrationController@store')->name('register');
+
+Route::get('/annonce/{id}', 'annonceController@show')->name('annonce');
+Route::get('/annonces', 'annoncesController@show')->name('annonces');
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
