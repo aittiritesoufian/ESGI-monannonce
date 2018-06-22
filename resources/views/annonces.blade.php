@@ -16,7 +16,7 @@
                     <p class="group inner list-group-item-text">{!! $annonce->description !!}</p>
                     <div class="row">
                         <div class="col-xs-12 col-md-6">
-                            <p class="lead">{{ $annonce->price}}</p>
+                            <p class="lead">{{ $annonce->price}} €</p>
                         </div>
                         <div class="col-xs-12 col-md-6">
                             <a class="btn btn-success" href="/annonce/{{ $annonce->id }}">Voir l'annonce</a>
