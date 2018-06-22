@@ -84,7 +84,7 @@
 
                 <div class="links">
                     <a href="/annonces">Accéder aux annonces</a>
-                    <a href="/admin/register">Créer un compte</a>
+                    <a href="/register">Créer un compte</a>
                 </div>
             </div>
         </div>
