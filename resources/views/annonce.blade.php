@@ -22,7 +22,7 @@
 					
 				<div class="col-md-8">
 					<div class="product-title">{{ $annonce->title}}</div>
-					<div class="product-price">{{ $annonce->price}}</div>
+					<div class="product-price">{{ $annonce->price}} €</div>
 					<hr>
 					<div class="btn-group cart">
 						<button type="button" class="btn btn-success">
@@ -50,7 +50,7 @@
 						<div class="tab-pane fade in active" id="service-one">
 						 
 							<section class="container product-info">
-							{{ $annonce->description}}
+							{!! $annonce->description !!}
 							</section>
 										  
 						</div>
