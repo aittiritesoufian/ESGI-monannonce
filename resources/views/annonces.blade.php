@@ -13,13 +13,13 @@
                 <img class="group list-group-image" src="http://placehold.it/400x250/000/fff" alt="" />
                 <div class="caption">
                     <h4 class="group inner list-group-item-heading">{{ $annonce->title}}</h4>
-                    <p class="group inner list-group-item-text">{{ $annonce->description}}</p>
+                    <p class="group inner list-group-item-text">{!! $annonce->description !!}</p>
                     <div class="row">
                         <div class="col-xs-12 col-md-6">
                             <p class="lead">{{ $annonce->price}}</p>
                         </div>
                         <div class="col-xs-12 col-md-6">
-                            <a class="btn btn-success" href="./annonce">Voir l'annonce</a>
+                            <a class="btn btn-success" href="/annonce/{{ $annonce->id }}">Voir l'annonce</a>
                         </div>
                     </div>
                 </div>

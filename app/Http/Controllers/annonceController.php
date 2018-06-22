@@ -9,7 +9,10 @@ class annonceController extends Controller {
 	public function show($id = "")
 	{
 	   	$post = Annonce::whereRaw('id = ?', [$id])->get();	
-	   	$currentID = Auth::user()->id;
+   		if (Auth::user() != null)
+   			$currentID = Auth::user()->id;   			
+	   	else
+	   		$currentID = NULL; 	
 	   	return view('annonce', ['id' => $id, "annonce" => $post[0], 'currentUserId' => $currentID]);
 	}
 }
