@@ -25,10 +25,10 @@ class User extends \TCG\Voyager\Models\User
      */
     protected $hidden = [
         'password', 'remember_token',
-    ];
+    ];/*
 
     public function setPasswordAttribute($password)
     {
         $this->attributes['password'] = bcrypt($password);
-    }
+    }*/
 }

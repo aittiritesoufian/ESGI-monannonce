@@ -44,8 +44,11 @@
 			<!-- Collect the nav links, forms, and other content for toggling -->
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 				<ul class="nav navbar-nav">
-					<li class="active"><a href="http://monannonce.project/">weshHome</a></li>
-					<li><a href="http://monannonce.project/annonces">Consulte les annonces</a></li>
+					<li class="active"><a href="http://monannonce.project/">Home</a></li>
+					<li><a href="http://monannonce.project/annonces">Consulter les annonces</a></li>
+          @if (Auth::check())
+            <li><a href="http://monannonce.project/admin/annonces">Mes annonces</a></li>
+          @endif
 				</ul>
 				
         @yield('search')

@@ -31,7 +31,11 @@
 @endsection
 
 @section('search')
-    <form class="navbar-form" role="search">
+    {!! Form::open(['url' => 'annonces']) !!}
+        {!! Form::text('search') !!}
+        {!! Form::submit('Rechercher') !!}
+    {!! Form::close() !!}
+    <form class="navbar-form" role="search" method="GET" action="/annonces/">
         <div class="input-group">
             <input id="search" type="text" class="form-control" placeholder="Rechercher une annnonce">
             <span class="input-group-btn">

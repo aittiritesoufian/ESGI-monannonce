@@ -21,6 +21,8 @@ Route::post('register', 'RegistrationController@store')->name('register');
 Route::get('/annonce/{id}', 'annonceController@show')->name('annonce');
 Route::get('/annonces', 'annoncesController@show')->name('annonces');
 
+Route::post('/annonces', 'annoncesController@search');
+
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });
