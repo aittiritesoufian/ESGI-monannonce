@@ -34,7 +34,7 @@
     <form class="navbar-form" role="search" method="POST" action="/annonces/">
         <div class="input-group">
             {{ csrf_field() }}
-            <input id="search" type="text" name="search" class="form-control" placeholder="Rechercher une annnonce">
+            <input id="search" type="text" name="search" class="form-control" value="{{ app('request')->input('search') }}" placeholder="Rechercher une annnonce">
             <span class="input-group-btn">
                 <button type="reset" class="btn btn-default">
                     <span class="glyphicon glyphicon-remove">
