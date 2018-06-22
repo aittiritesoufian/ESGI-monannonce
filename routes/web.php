@@ -23,6 +23,8 @@ Route::get('/annonce', function () {
     return view('annonce');
 });
 
+Route::get('/register', 'RegistrationController@create');
+Route::post('register', 'RegistrationController@store')->name('register');
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
