@@ -25,9 +25,7 @@
 					<div class="product-price">{{ $annonce->price}} €</div>
 					<hr>
 					<div class="btn-group cart">
-						<button type="button" class="btn btn-success">
-							Contacter le vendeur
-						</button>
+						<a href="mailto:{{ $user->email }}" class="btn btn-success">Contacter le vendeur</a>
 					</div>
 					@if ($annonce->user == $currentUserId)
 					<div class="btn-group">
