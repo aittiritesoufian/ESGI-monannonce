@@ -31,13 +31,10 @@
 @endsection
 
 @section('search')
-    {!! Form::open(['url' => 'annonces']) !!}
-        {!! Form::text('search') !!}
-        {!! Form::submit('Rechercher') !!}
-    {!! Form::close() !!}
-    <form class="navbar-form" role="search" method="GET" action="/annonces/">
+    <form class="navbar-form" role="search" method="POST" action="/annonces/">
         <div class="input-group">
-            <input id="search" type="text" class="form-control" placeholder="Rechercher une annnonce">
+            {{ csrf_field() }}
+            <input id="search" type="text" name="search" class="form-control" placeholder="Rechercher une annnonce">
             <span class="input-group-btn">
                 <button type="reset" class="btn btn-default">
                     <span class="glyphicon glyphicon-remove">
